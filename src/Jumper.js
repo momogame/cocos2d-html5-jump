@@ -67,6 +67,10 @@ var Jumper = cc.Sprite.extend({
             }
         }
         this.x += this.vx;
+        this.checkOutOfScreen();
+        
+    },
+    checkOutOfScreen: function() {
         if ( this.x < 0 ) {
             this.x += screenWidth;
         }
